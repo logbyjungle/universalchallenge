@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "jungles-universal-challenges",
+	"version": "${version}",
+	"name": "Jungle's Universal Challenges",
+	"description": "A collection of every challenge from me",
+	"authors": [
+		"logbyjungle"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/jungles-universal-challenges/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"name.modid.JunglesUniversalChallenges"
+		],
+		"client": [
+			"name.modid.JunglesUniversalChallengesClient"
+		]
+	},
+	"mixins": [
+		"jungles-universal-challenges.mixins.json",
+		{
+			"config": "jungles-universal-challenges.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.18.4",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}

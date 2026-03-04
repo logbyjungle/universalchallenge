@@ -1,0 +1,8 @@
+{
+  "text.config.jungleconfig.title": "Jungle's Challenges Config",
+  "text.config.jungleconfig.option.air_challenge": "Air Challenge",
+  "text.config.jungleconfig.option.hunger_challenge": "Hunger Challenge",
+  "text.config.jungleconfig.option.light_challenge": "Light Challenge",
+  "text.config.jungleconfig.option.light_challenge_pure": "Pure Light Challenge",
+  "text.config.jungleconfig.option.xp_challenge": "XP Challenge"
+}
