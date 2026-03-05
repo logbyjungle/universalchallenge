@@ -30,26 +30,22 @@ public class JunglesUniversalChallenges implements ModInitializer {
 
 		ServerTickEvents.END_SERVER_TICK.register(server -> {
 
-			if (CONFIG.air_challenge()) {
-				for (ServerPlayerEntity player : server.getPlayerManager().getPlayerList()) {
+			for (ServerPlayerEntity player : server.getPlayerManager().getPlayerList()) {
+				if (CONFIG.air_challenge()) {
 					BlockPos pos = new BlockPos(player.getBlockX(), player.getBlockY(), player.getBlockZ());
 					if (player.getEntityWorld().getBlockState(pos).isAir()) {
 						player.kill(player.getEntityWorld());
 					}
 				}
-			}
 
-			if (CONFIG.xp_challenge()) {
-				for (ServerPlayerEntity player : server.getPlayerManager().getPlayerList()) {
+				if (CONFIG.xp_challenge()) {
 					int currentXp = player.totalExperience;
 					if (currentXp > 0) {
 						player.kill(player.getEntityWorld());
 					}
 				}
-			}
 
-			if (CONFIG.light_challenge() || CONFIG.light_challenge_pure()) {
-				for (ServerPlayerEntity player : server.getPlayerManager().getPlayerList()) {
+				if (CONFIG.light_challenge() || CONFIG.light_challenge_pure()) {
 					ServerWorld world = player.getEntityWorld();
 					BlockPos pos = player.getBlockPos();
 
@@ -69,6 +65,10 @@ public class JunglesUniversalChallenges implements ModInitializer {
 
 				}
 			}
+
+
+
+
 
 
 
